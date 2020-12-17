@@ -15,6 +15,7 @@ import { ListarproComponent } from './components/producto/listarpro/listarpro.co
 import { ProductoService } from './services/producto.service';
 import { VentasComponent } from './components/ventas/ventas.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
+import { DetalleventaComponent } from './components/detalleventa/detalleventa.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ClientesComponent } from './components/clientes/clientes.component';
     LoginComponent,
     ListarproComponent,
     VentasComponent,
-    ClientesComponent
+    ClientesComponent,
+    DetalleventaComponent
   ],
   imports: [
     BrowserModule,
