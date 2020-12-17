@@ -5,13 +5,15 @@ import { ListarComponent } from './components/roles/listar/listar.component';
 import { ListarproComponent } from './components/producto/listarpro/listarpro.component';
 import { AuthrutasGuard } from './services/guards/authrutas.guard';
 import { RoleGuard } from './services/guards/role.guard';
-
+import  {VentasComponent} from './components/ventas/ventas.component';
+ 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
-  {path: 'roles', component: ListarComponent, canActivate:[AuthrutasGuard, RoleGuard], data:{role:'SUBGERENTE'}},
-  {path: 'productos', component: ListarproComponent, canActivate:[AuthrutasGuard, RoleGuard], data:{role:'SUBGERENTE'}}
-];
 
+  {path: 'ventas', component: VentasComponent, canActivate:[AuthrutasGuard, RoleGuard], data:{role:['GERENTE_VENTAS','GERENTE','VENDEDOR']}},
+  {path: 'roles', component: ListarComponent, canActivate:[AuthrutasGuard, RoleGuard], data:{role:['GERENTE_VENTAS','GERENTE']}},
+  {path: 'productos', component: ListarproComponent, canActivate:[AuthrutasGuard, RoleGuard], data:{role:['GERENTE_VENTAS','GERENTE','VENDEDOR']}},
+];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

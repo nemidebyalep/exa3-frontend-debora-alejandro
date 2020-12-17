@@ -13,6 +13,8 @@ import { LoginComponent } from './components/login/login.component'
 import { AuthService } from './services/auth.service';
 import { ListarproComponent } from './components/producto/listarpro/listarpro.component';
 import { ProductoService } from './services/producto.service';
+import { VentasComponent } from './components/ventas/ventas.component';
+import { ClientesComponent } from './components/clientes/clientes.component';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { ProductoService } from './services/producto.service';
     FooterComponent,
     ListarComponent,
     LoginComponent,
-    ListarproComponent
+    ListarproComponent,
+    VentasComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
